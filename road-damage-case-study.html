@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UCSI Road Damage Reporting System | Durghaashini S Ragunathan</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.case{max-width:1180px;margin:auto;padding:72px clamp(24px,6vw,90px) 110px}
+.back{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:50px}.back a{text-decoration:none}
+.hero2{display:grid;grid-template-columns:1.15fr .85fr;gap:48px}.hero2 h1{font-size:clamp(48px,5.8vw,78px);line-height:.97;letter-spacing:-.055em;margin:14px 0 20px}.hero2 p,.section2 p{color:var(--muted)}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meta div,.card{border:1px solid var(--line);background:rgba(11,17,32,.7);border-radius:14px;padding:19px}.meta small{display:block;color:var(--muted-2);font-size:9px;text-transform:uppercase;letter-spacing:.08em}.meta strong{display:block;margin-top:5px;font-size:13px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.stack span{border:1px solid #2b3855;border-radius:8px;padding:7px 10px;font-size:10px;color:#c9d2e2;background:#0c1323}
+.preview{margin:46px 0 68px;border:1px solid #2c3855;border-radius:20px;padding:26px;background:linear-gradient(145deg,#0f1930,#090f1e)}.browser{border:1px solid #334260;border-radius:15px;overflow:hidden;background:#0b1220}.browser-top{height:32px;background:#151f35;border-bottom:1px solid #293756}.app{display:grid;grid-template-columns:190px 1fr;min-height:340px}.side{padding:18px;background:#111a2f;border-right:1px solid #293756}.side i{display:block;height:9px;border-radius:5px;background:#2b3958;margin:13px 0}.main{display:grid;grid-template-columns:1fr .72fr;gap:14px;padding:20px}.map{position:relative;min-height:290px;border-radius:10px;background:#dce6ee;overflow:hidden}.road{position:absolute;background:#b7c4cd}.r1{width:130%;height:7px;left:-15%;top:43%;transform:rotate(-16deg)}.r2{width:7px;height:140%;left:57%;top:-20%;transform:rotate(12deg)}.r3{width:100%;height:5px;left:0;top:72%;transform:rotate(18deg)}.pin{position:absolute;width:15px;height:15px;border-radius:50% 50% 50% 0;background:#7857ff;transform:rotate(-45deg)}.p1{left:28%;top:32%}.p2{left:64%;top:54%}.p3{left:47%;top:68%}.report-panel{display:flex;flex-direction:column;gap:10px}.report-panel div{border:1px solid #2a3857;background:#121d33;border-radius:9px;padding:12px}.report-panel span{display:block;height:7px;background:#2e4165;border-radius:4px;margin:8px 0}
+.section2{padding:52px 0;border-top:1px solid rgba(148,163,184,.12)}.section2 h2{font-size:34px;letter-spacing:-.035em;margin:0 0 17px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:24px}.card h3{font-size:15px;margin:0 0 9px}.card p{font-size:12px;margin:0;line-height:1.65}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.feature{border:1px solid var(--line);border-radius:13px;background:#0c1324;padding:18px}.feature strong{display:block;font-size:12px;margin-bottom:6px}.feature span{font-size:11px;color:var(--muted)}
+.note{padding:20px;border:1px solid #3b4770;border-radius:14px;background:rgba(53,65,105,.12);color:#c5cee1;font-size:12px}
+.footer2{display:flex;justify-content:space-between;gap:20px;padding-top:40px;border-top:1px solid rgba(148,163,184,.12)}
+@media(max-width:900px){.hero2,.grid2{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.app{grid-template-columns:90px 1fr}.main{grid-template-columns:1fr}}
+@media(max-width:560px){.meta,.features{grid-template-columns:1fr}.app{grid-template-columns:1fr}.side{display:none}}
+.case-main-nav{display:flex}
+@media(max-width:760px){
+  .case-main-nav{display:none!important}
+  .site-header{grid-template-columns:1fr auto}
+  .header-actions{display:flex}
+  .header-actions .cta-small{display:inline-flex}
+}
+</style>
+</head>
+<body>
+<div class="page-grid"></div><div class="glow glow-one"></div>
+<header class="site-header">
+<a class="brand" href="index.html"><span class="brand-mark">DR</span><span class="brand-copy"><strong>DURGHAASHINI</strong><small>Software Developer</small></span></a>
+<nav class="main-nav">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="research-credentials.html">Research</a>
+      <a href="research-credentials.html#credentials">Credentials</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+<div class="header-actions"><a class="cta-small" href="index.html">Back to Portfolio</a></div>
+</header>
+<main class="case">
+<div class="back"><a href="index.html#projects">← Back to Projects</a><span>CASE STUDY · WEB PROGRAMMING GROUP PROJECT</span></div>
+<section class="hero2">
+<div><div class="section-kicker"><span class="dot"></span>WEB DEVELOPMENT · MAP INTERACTION · FRONTEND LOGIC</div><h1>UCSI Road Damage Reporting System</h1><p>A campus-focused web application that allows users to report road hazards with photos and map locations while staff can review and manage submitted reports.</p><div class="stack"><span>PHP</span><span>JavaScript</span><span>MySQL / MariaDB</span><span>Leaflet.js</span><span>OpenStreetMap</span></div></div>
+<div class="meta"><div><small>Project Type</small><strong>University Group Project</strong></div><div><small>Team Size</small><strong>4 Students</strong></div><div><small>My Contribution</small><strong>Frontend Logic Developer</strong></div><div><small>Context</small><strong>UCSI Campus Reporting</strong></div></div>
+</section>
+
+<div class="preview"><div class="browser"><div class="browser-top"></div><div class="app"><div class="side"><i></i><i></i><i></i><i></i><i></i></div><div class="main"><div class="map"><div class="road r1"></div><div class="road r2"></div><div class="road r3"></div><div class="pin p1"></div><div class="pin p2"></div><div class="pin p3"></div></div><div class="report-panel"><div><b>Report #021</b><span></span><span></span></div><div><b>Report #020</b><span></span><span></span></div><div><b>Report #019</b><span></span><span></span></div></div></div></div></div></div>
+
+<section class="section2"><div class="section-kicker"><span class="dot"></span>THE PROBLEM</div><h2>Road issues need a clearer reporting workflow.</h2><p>The project focused on making it easier for campus users to submit road-damage reports with enough context for staff to review them. A useful report needed more than a text description — it needed location information, photographic evidence and a clear status flow.</p></section>
+
+<section class="section2"><div class="section-kicker"><span class="dot"></span>THE SOLUTION</div><h2>Report the issue, show the location and track what happens next.</h2>
+<div class="features"><div class="feature"><strong>Hazard Submission</strong><span>Structured road-issue submission workflow.</span></div><div class="feature"><strong>Photo Evidence</strong><span>Multiple images can be previewed before submission.</span></div><div class="feature"><strong>Map Location</strong><span>Leaflet.js and OpenStreetMap provide geographic context.</span></div><div class="feature"><strong>User Dashboard</strong><span>Users can review their submitted reports and status.</span></div><div class="feature"><strong>Client-Side Validation</strong><span>Immediate feedback helps prevent incomplete submissions.</span></div><div class="feature"><strong>Staff Review</strong><span>Submitted reports can be reviewed and managed by staff.</span></div></div>
+</section>
+
+<section class="section2"><div class="section-kicker"><span class="dot"></span>MY CONTRIBUTION</div><h2>Focused on the user-facing interaction logic.</h2>
+<div class="grid2"><div class="card"><h3>User Dashboard</h3><p>Developed interactive user-side dashboard behavior for accessing reports and reporting functions.</p></div><div class="card"><h3>Hazard Submission Forms</h3><p>Worked on the submission experience and frontend behavior around road-damage reporting.</p></div><div class="card"><h3>JavaScript Validation & Modals</h3><p>Implemented client-side validation and dynamic modal interactions.</p></div><div class="card"><h3>Multi-Photo Preview</h3><p>Implemented preview behavior so users could review selected images before submitting evidence.</p></div></div>
+</section>
+
+<section class="section2"><div class="section-kicker"><span class="dot"></span>TECHNICAL APPROACH</div><h2>A traditional web stack with interactive mapping.</h2>
+<div class="grid2"><div class="card"><h3>PHP</h3><p>Supported server-side application functionality.</p></div><div class="card"><h3>JavaScript</h3><p>Handled interaction, validation, modal behavior and image previews.</p></div><div class="card"><h3>MySQL / MariaDB</h3><p>Stored user, report and application data.</p></div><div class="card"><h3>Leaflet.js + OpenStreetMap</h3><p>Provided the mapping layer used for road-hazard locations.</p></div></div>
+</section>
+
+<section class="section2"><div class="section-kicker"><span class="dot"></span>TEAM PROJECT CONTEXT</div><h2>Clear contribution boundaries matter.</h2><div class="note">This was a four-member university group project. The portfolio describes my specific contribution to the frontend interaction logic rather than presenting the entire system as individual work.</div></section>
+
+<section class="section2"><div class="section-kicker"><span class="dot"></span>WHAT THIS PROJECT DEMONSTRATES</div><h2>Frontend logic tied to a real user workflow.</h2>
+<div class="grid2"><div class="card"><h3>Interactive Web Development</h3><p>Using JavaScript to manage behavior and validation beyond static pages.</p></div><div class="card"><h3>Map-Based Interfaces</h3><p>Working with Leaflet.js and OpenStreetMap to give reports geographic context.</p></div><div class="card"><h3>Team Collaboration</h3><p>Developing a defined contribution within a shared multi-developer project.</p></div><div class="card"><h3>User-Focused Thinking</h3><p>Improving submission quality with feedback, previews and clear reporting flows.</p></div></div>
+</section>
+
+<div class="footer2">
+    <a class="button secondary" href="index.html">Back to Home</a>
+    <a class="button primary" href="index.html#contact">Contact Me</a>
+  </div>
+</main>
+</body>
+</html>

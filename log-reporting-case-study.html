@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: Log Reporting System — Diploma Final Year Project by Durghaashini S Ragunathan." />
+  <title>Log Reporting System | Durghaashini S Ragunathan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .case{max-width:1180px;margin:auto;padding:72px clamp(24px,6vw,90px) 110px}
+    .back{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:50px}
+    .back a{text-decoration:none}
+    .hero2{display:grid;grid-template-columns:1.15fr .85fr;gap:48px}
+    .hero2 h1{font-size:clamp(50px,6vw,80px);line-height:.97;letter-spacing:-.055em;margin:14px 0 20px}
+    .hero2 p,.section2 p{color:var(--muted)}
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .meta div,.card{border:1px solid var(--line);background:rgba(11,17,32,.7);border-radius:14px;padding:19px}
+    .meta small{display:block;color:var(--muted-2);font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+    .meta strong{display:block;margin-top:5px;font-size:13px}
+    .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+    .stack span{border:1px solid #2b3855;border-radius:8px;padding:7px 10px;font-size:10px;color:#c9d2e2;background:#0c1323}
+    .preview{margin:46px 0 68px;border:1px solid #2c3855;border-radius:20px;padding:30px;background:radial-gradient(circle at 50% 18%,rgba(111,76,255,.16),transparent 28%),linear-gradient(145deg,#0f1930,#090f1e)}
+    .desktop{max-width:860px;margin:auto;border:1px solid #344260;border-radius:14px;overflow:hidden;background:#dfe5ec;box-shadow:0 28px 60px rgba(0,0,0,.35)}
+    .windowbar{height:32px;background:#2a3446;display:flex;align-items:center;padding:0 12px;gap:7px}.windowbar i{width:8px;height:8px;border-radius:50%;background:#738198}
+    .app{display:grid;grid-template-columns:180px 1fr;min-height:330px;background:#f5f7fa;color:#253047}
+    .sidebar{background:#24314a;color:#dbe4f1;padding:18px}.sidebar b{display:block;margin-bottom:23px}.sidebar i{display:block;height:9px;background:#415170;border-radius:5px;margin:13px 0}
+    .main{padding:20px}.top{height:32px;background:#fff;border:1px solid #d7dde7;border-radius:6px;margin-bottom:14px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.box{height:46px;background:#fff;border:1px solid #d5dce7;border-radius:5px}.table{margin-top:14px;background:#fff;border:1px solid #d5dce7;border-radius:6px;padding:12px}.table i{display:block;height:9px;border-bottom:1px solid #d9e0ea;margin:10px 0}
+    .section2{padding:52px 0;border-top:1px solid rgba(148,163,184,.12)}.section2 h2{font-size:34px;letter-spacing:-.035em;margin:0 0 17px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:24px}.card h3{font-size:15px;margin:0 0 9px}.card p{font-size:12px;margin:0;line-height:1.65}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.feature{border:1px solid var(--line);border-radius:13px;background:#0c1324;padding:18px}.feature strong{display:block;font-size:12px;margin-bottom:6px}.feature span{font-size:11px;color:var(--muted)}
+    .decision{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid rgba(148,163,184,.1)}.decision:last-child{border-bottom:0}
+    .decision b{width:40px;height:40px;border:1px solid #354362;border-radius:10px;display:grid;place-items:center;color:#ad95ff;font-size:11px}.decision strong{display:block;font-size:13px;margin-bottom:5px}.decision p{font-size:12px;margin:0}
+    .note{padding:20px;border:1px solid #3b4770;border-radius:14px;background:rgba(53,65,105,.12);color:#c5cee1;font-size:12px}
+    .footer2{display:flex;justify-content:space-between;gap:20px;padding-top:40px;border-top:1px solid rgba(148,163,184,.12)}
+    @media(max-width:900px){.hero2,.grid2{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.app{grid-template-columns:100px 1fr}}
+    @media(max-width:560px){.meta,.features{grid-template-columns:1fr}.app{grid-template-columns:1fr}.sidebar{display:none}.form-grid{grid-template-columns:1fr}}
+  .case-main-nav{display:flex}
+@media(max-width:760px){
+  .case-main-nav{display:none!important}
+  .site-header{grid-template-columns:1fr auto}
+  .header-actions{display:flex}
+  .header-actions .cta-small{display:inline-flex}
+}
+</style>
+</head>
+<body>
+<div class="page-grid"></div><div class="glow glow-one"></div>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">DR</span>
+    <span class="brand-copy"><strong>DURGHAASHINI</strong><small>Software Developer</small></span>
+  </a>
+  <nav class="main-nav">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="research-credentials.html">Research</a>
+      <a href="research-credentials.html#credentials">Credentials</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  <div class="header-actions"><a class="cta-small" href="index.html">Back to Portfolio</a></div>
+</header>
+
+<main class="case">
+  <div class="back">
+    <a href="index.html#projects">← Back to Projects</a>
+    <span>CASE STUDY · DIPLOMA FINAL YEAR PROJECT</span>
+  </div>
+
+  <section class="hero2">
+    <div>
+      <div class="section-kicker"><span class="dot"></span>DESKTOP APPLICATION · DATABASE SYSTEM</div>
+      <h1>Log Reporting System</h1>
+      <p>
+        A Windows desktop application developed as a Diploma Final Year Project
+        to manage staff access, log-report submission, supporting evidence,
+        search/filtering and report viewing.
+      </p>
+      <div class="stack">
+        <span>VB.NET</span><span>Windows Forms</span><span>Microsoft SQL Server</span>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div><small>Project Type</small><strong>Diploma Final Year Project</strong></div>
+      <div><small>Team Structure</small><strong>Pair Project</strong></div>
+      <div><small>Platform</small><strong>Windows Desktop</strong></div>
+      <div><small>Case Study Context</small><strong>Lembaga Air Perak</strong></div>
+    </div>
+  </section>
+
+  <div class="preview">
+    <div class="desktop">
+      <div class="windowbar"><i></i><i></i><i></i></div>
+      <div class="app">
+        <div class="sidebar">
+          <b>Log Reporting</b>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="main">
+          <div class="top"></div>
+          <div class="form-grid"><div class="box"></div><div class="box"></div><div class="box"></div><div class="box"></div></div>
+          <div class="table"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section2">
+    <div class="section-kicker"><span class="dot"></span>PROJECT CONTEXT</div>
+    <h2>An academic system based on a real organizational setting.</h2>
+    <p>
+      The project used Lembaga Air Perak as an academic case study for a log-reporting workflow.
+      It was developed as a pair project and was not an official client system for the organization.
+    </p>
+  </section>
+
+  <section class="section2">
+    <div class="section-kicker"><span class="dot"></span>THE PROBLEM</div>
+    <h2>Log records need structure, access control and easier retrieval.</h2>
+    <p>
+      The system was designed around the need to record staff log reports in a consistent format,
+      store supporting information, manage users and make historical records easier to search,
+      review and reproduce when needed.
+    </p>
+  </section>
+
+  <section class="section2">
+    <div class="section-kicker"><span class="dot"></span>CORE FUNCTIONALITY</div>
+    <h2>Desktop workflows connected to a relational database.</h2>
+    <div class="features">
+      <div class="feature"><strong>Authentication</strong><span>Administrator and staff login workflows.</span></div>
+      <div class="feature"><strong>Staff Registration</strong><span>Register and manage staff information within the application.</span></div>
+      <div class="feature"><strong>Log Report Submission</strong><span>Create and save structured log-report records.</span></div>
+      <div class="feature"><strong>Image Evidence</strong><span>Associate supporting image evidence with reports.</span></div>
+      <div class="feature"><strong>Search & Filtering</strong><span>Find existing reports using searchable and filterable records.</span></div>
+      <div class="feature"><strong>Report Viewing</strong><span>Review stored report information from the desktop interface.</span></div>
+      <div class="feature"><strong>Print / Save</strong><span>Support report output and document-related operations.</span></div>
+      <div class="feature"><strong>Staff Management</strong><span>Maintain user information from the administrative side.</span></div>
+      <div class="feature"><strong>SQL Server Storage</strong><span>Persist application data in a relational database.</span></div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="section-kicker"><span class="dot"></span>TECHNICAL APPROACH</div>
+    <h2>A classic desktop application architecture.</h2>
+    <div class="grid2">
+      <div class="card"><h3>VB.NET</h3><p>Used for application logic and event-driven desktop functionality.</p></div>
+      <div class="card"><h3>Windows Forms</h3><p>Provided the graphical desktop interface for staff and administrator workflows.</p></div>
+      <div class="card"><h3>Microsoft SQL Server</h3><p>Stored staff accounts, report records and related application data.</p></div>
+      <div class="card"><h3>Database-Driven Forms</h3><p>Connected user actions in the interface with create, retrieve and management operations in the database.</p></div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="section-kicker"><span class="dot"></span>IMPORTANT DESIGN DECISIONS</div>
+    <h2>Keep the workflow clear for everyday desktop use.</h2>
+
+    <div class="decision">
+      <b>01</b>
+      <div><strong>Separate administrator and staff access</strong><p>Different user roles support different responsibilities inside the system.</p></div>
+    </div>
+    <div class="decision">
+      <b>02</b>
+      <div><strong>Centralize records in SQL Server</strong><p>A structured relational database makes report history easier to manage than disconnected files or documents.</p></div>
+    </div>
+    <div class="decision">
+      <b>03</b>
+      <div><strong>Support evidence alongside text reports</strong><p>Images provide additional context for log entries instead of relying only on written descriptions.</p></div>
+    </div>
+    <div class="decision">
+      <b>04</b>
+      <div><strong>Include search and filtering</strong><p>Historical reporting data becomes much more useful when users can retrieve relevant records efficiently.</p></div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="section-kicker"><span class="dot"></span>PROJECT BOUNDARY</div>
+    <h2>Academic case study, not client deployment.</h2>
+    <div class="note">
+      Lembaga Air Perak was used as the organizational context for this Diploma Final Year Project.
+      The application should not be interpreted as an official Lembaga Air Perak system or commercial client delivery.
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="section-kicker"><span class="dot"></span>WHAT THIS PROJECT DEMONSTRATES</div>
+    <h2>My foundation in database-backed application development.</h2>
+    <div class="grid2">
+      <div class="card"><h3>Desktop Development</h3><p>Building event-driven Windows applications with a graphical user interface.</p></div>
+      <div class="card"><h3>Relational Database Integration</h3><p>Connecting application workflows to Microsoft SQL Server for persistent data management.</p></div>
+      <div class="card"><h3>Authentication & CRUD Workflows</h3><p>Implementing common software patterns such as login, registration, submission, search and record management.</p></div>
+      <div class="card"><h3>Progression as a Developer</h3><p>This earlier project shows the database and application-development foundation that later expanded into web, mobile and AI-focused systems.</p></div>
+    </div>
+  </section>
+
+  <div class="footer2">
+    <a class="button secondary" href="index.html">Back to Home</a>
+    <a class="button primary" href="index.html#contact">Contact Me</a>
+  </div>
+</main>
+</body>
+</html>

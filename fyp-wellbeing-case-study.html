@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: AI-Driven Gamification for Personalized Wellbeing Monitoring by Durghaashini S Ragunathan." />
+  <title>AI-Driven Gamification for Personalized Wellbeing Monitoring | Durghaashini</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .case-wrap{max-width:1180px;margin:auto;padding:72px clamp(24px,6vw,90px) 110px}
+    .case-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:54px;font-size:12px;color:var(--muted)}
+    .case-nav a{text-decoration:none}
+    .case-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+    .case-hero h1{font-size:clamp(48px,5.7vw,76px);line-height:.98;letter-spacing:-.055em;margin:14px 0 22px}
+    .case-hero p{color:var(--muted);font-size:17px;line-height:1.75}
+    .case-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .meta-card{padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(13,20,37,.78)}
+    .meta-card small{display:block;color:var(--muted-2);font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+    .meta-card strong{display:block;margin-top:5px;font-size:13px}
+    .stack{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.stack span{border:1px solid #2b3855;border-radius:8px;padding:7px 10px;font-size:10px;color:#c9d2e2;background:#0c1323}
+    .case-banner{margin:46px 0 68px;padding:28px;border:1px solid #2b3856;border-radius:20px;background:radial-gradient(circle at 48% 18%,rgba(139,92,246,.18),transparent 28%),linear-gradient(145deg,#0f1930,#090f1e)}
+    .architecture{display:grid;grid-template-columns:1fr .9fr 1fr;gap:15px;align-items:stretch}
+    .arch-col{padding:17px;border:1px solid #33425f;border-radius:14px;background:#0d1425}
+    .arch-col h3{font-size:12px;margin:0 0 14px;color:#e5e9f2}
+    .node{padding:10px 11px;margin:8px 0;border-radius:9px;border:1px solid #2f3d5c;background:#10192c;color:#9fabc0;font-size:10px}
+    .node.focus{border-color:#684bd0;background:linear-gradient(145deg,rgba(111,76,210,.24),rgba(25,26,58,.45));color:#ddd6ff}
+    .arch-arrow{text-align:center;color:#8e78ea;font-size:10px;margin:6px 0}
+    .case-section{padding:54px 0;border-top:1px solid rgba(148,163,184,.12)}
+    .case-section h2{font-size:34px;letter-spacing:-.035em;margin:0 0 18px}
+    .case-section p{color:var(--muted);max-width:890px}
+    .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+    .case-card{padding:22px;border:1px solid var(--line);border-radius:14px;background:rgba(11,17,32,.68)}
+    .case-card h3{font-size:15px;margin:0 0 10px}
+    .case-card p{font-size:12px;line-height:1.65;margin:0}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .feature{padding:18px;border:1px solid var(--line);border-radius:13px;background:#0c1324}
+    .feature strong{display:block;font-size:12px;margin-bottom:6px}
+    .feature span{font-size:11px;color:var(--muted)}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:25px}
+    .flow-step{position:relative;padding:18px;border:1px solid #2b3855;border-radius:12px;background:#0c1324}
+    .flow-step b{display:block;color:#a78bfa;font-size:10px;margin-bottom:7px}
+    .flow-step strong{display:block;font-size:12px;margin-bottom:5px}
+    .flow-step span{font-size:10px;color:var(--muted)}
+    .decision{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid rgba(148,163,184,.1)}
+    .decision:last-child{border-bottom:0}
+    .decision b{width:40px;height:40px;border:1px solid #354362;border-radius:10px;display:grid;place-items:center;color:#ad95ff;font-size:11px}
+    .decision strong{display:block;font-size:13px;margin-bottom:5px}
+    .decision p{font-size:12px;margin:0}
+    .note{padding:20px;border:1px solid #3b4770;border-radius:14px;background:rgba(53,65,105,.12);color:#c5cee1;font-size:12px}
+    .case-footer{display:flex;justify-content:space-between;gap:24px;align-items:center;padding-top:42px;border-top:1px solid rgba(148,163,184,.12)}
+    @media(max-width:900px){.case-hero,.case-grid{grid-template-columns:1fr}.architecture{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.feature-grid,.flow{grid-template-columns:1fr}.case-meta{grid-template-columns:1fr}}
+  .case-main-nav{display:flex}
+@media(max-width:760px){
+  .case-main-nav{display:none!important}
+  .site-header{grid-template-columns:1fr auto}
+  .header-actions{display:flex}
+  .header-actions .cta-small{display:inline-flex}
+}
+</style>
+</head>
+<body>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="glow glow-one" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">DR</span>
+      <span class="brand-copy"><strong>DURGHAASHINI</strong><small>Software Developer</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="research-credentials.html">Research</a>
+      <a href="research-credentials.html#credentials">Credentials</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions"><a class="cta-small" href="index.html">Back to Portfolio</a></div>
+  </header>
+
+  <main class="case-wrap">
+    <div class="case-nav">
+      <a href="index.html#projects">← Back to Projects</a>
+      <span>CASE STUDY · BACHELOR'S FINAL YEAR PROJECT</span>
+    </div>
+
+    <section class="case-hero">
+      <div>
+        <div class="section-kicker"><span class="dot"></span>AI · GAMIFICATION · WELLBEING</div>
+        <h1>AI-Driven Gamification for Personalized Wellbeing Monitoring</h1>
+        <p>
+          My Final Year Project module within a larger collaborative university mental-health application,
+          focused on making wellbeing interactions more engaging, personalized and trackable.
+        </p>
+        <div class="stack">
+          <span>Flutter / Dart</span><span>FastAPI</span><span>Python</span><span>PostgreSQL</span>
+          <span>REST APIs</span><span>AI / ML Integration</span>
+        </div>
+      </div>
+
+      <div class="case-meta">
+        <div class="meta-card"><small>Project Type</small><strong>Degree Final Year Project</strong></div>
+        <div class="meta-card"><small>My Contribution</small><strong>Individual Feature / Module</strong></div>
+        <div class="meta-card"><small>Application Context</small><strong>Collaborative Mental-Health App</strong></div>
+        <div class="meta-card"><small>Focus</small><strong>Gamification + Personalization</strong></div>
+      </div>
+    </section>
+
+    <div class="case-banner">
+      <div class="architecture">
+        <div class="arch-col">
+          <h3>Overall University Application</h3>
+          <div class="node">Authentication & User Profile</div>
+          <div class="node">Dashboard / Home</div>
+          <div class="node">Assessment & Companion</div>
+          <div class="node">Appointments / Resources</div>
+          <div class="node">Other Team Modules</div>
+        </div>
+
+        <div class="arch-col">
+          <h3>My FYP Module</h3>
+          <div class="node focus">Mood-Based Interaction</div>
+          <div class="arch-arrow">↓</div>
+          <div class="node focus">Gamified Wellbeing Activities</div>
+          <div class="arch-arrow">↓</div>
+          <div class="node focus">Rewards & Progress Tracking</div>
+          <div class="arch-arrow">↓</div>
+          <div class="node focus">AI-Assisted Personalization</div>
+        </div>
+
+        <div class="arch-col">
+          <h3>Supporting Services</h3>
+          <div class="node">FastAPI / Python Services</div>
+          <div class="node">PostgreSQL Data Layer</div>
+          <div class="node">REST API Integration</div>
+          <div class="node">AI / ML Service</div>
+          <div class="node">Shared App Data</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>PROJECT CONTEXT</div>
+      <h2>A focused module inside a larger collaborative system.</h2>
+      <p>
+        The complete mental-health application was developed collaboratively by multiple student developers,
+        with each student responsible for a specific feature or module. My FYP focused on AI-driven gamification
+        and personalized wellbeing monitoring, designed to integrate into that larger application rather than operate as a standalone product.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>THE PROBLEM</div>
+      <h2>Wellbeing tools can become passive if users have no reason to keep engaging.</h2>
+      <p>
+        My module explored how gamification, progress visibility and AI-assisted personalization could make
+        wellbeing interactions more engaging while still keeping the system focused on practical monitoring and user experience.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>CORE MODULE FEATURES</div>
+      <h2>Designed around interaction, motivation and personalization.</h2>
+      <div class="feature-grid">
+        <div class="feature"><strong>Mood-Based Interaction</strong><span>Uses mood-related input as part of the user's ongoing wellbeing interaction.</span></div>
+        <div class="feature"><strong>Wellbeing Activities</strong><span>Supports activity-based engagement rather than passive information display.</span></div>
+        <div class="feature"><strong>Gamification</strong><span>Introduces rewards and progress mechanisms to encourage continued engagement.</span></div>
+        <div class="feature"><strong>Progress Tracking</strong><span>Provides visibility into user activity and progression over time.</span></div>
+        <div class="feature"><strong>Personalized Feedback</strong><span>Uses AI-assisted logic to support more relevant responses and recommendations.</span></div>
+        <div class="feature"><strong>App Integration</strong><span>Designed to work within a larger shared university mental-health application.</span></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>USER FLOW</div>
+      <h2>A simple interaction loop.</h2>
+      <div class="flow">
+        <div class="flow-step"><b>STEP 01</b><strong>User Interaction</strong><span>User engages with mood and wellbeing features.</span></div>
+        <div class="flow-step"><b>STEP 02</b><strong>Activity & Progress</strong><span>The module tracks activity and progression.</span></div>
+        <div class="flow-step"><b>STEP 03</b><strong>Gamified Response</strong><span>Rewards and progress cues reinforce participation.</span></div>
+        <div class="flow-step"><b>STEP 04</b><strong>Personalized Feedback</strong><span>AI-assisted logic supports relevant feedback.</span></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>TECHNICAL APPROACH</div>
+      <h2>Mobile UI, API services and relational data working together.</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>Flutter / Dart Frontend</h3>
+          <p>Built the user-facing module interactions in the same mobile technology used by the wider application.</p>
+        </article>
+        <article class="case-card">
+          <h3>FastAPI / Python Services</h3>
+          <p>Used backend services to support application logic and communication between the mobile client and supporting functionality.</p>
+        </article>
+        <article class="case-card">
+          <h3>PostgreSQL</h3>
+          <p>Worked with relational data structures for user-related and module-related information.</p>
+        </article>
+        <article class="case-card">
+          <h3>REST API Integration</h3>
+          <p>Connected module functionality to backend services and shared application data through APIs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>DESIGN DECISIONS</div>
+      <h2>Keeping the feature useful, not just gamified.</h2>
+
+      <div class="decision">
+        <b>01</b>
+        <div><strong>Gamification supports the wellbeing goal</strong><p>Rewards and progress are used to support engagement rather than turning the experience into a game for its own sake.</p></div>
+      </div>
+      <div class="decision">
+        <b>02</b>
+        <div><strong>Personalization is tied to user interaction</strong><p>The module uses user-related context and activity to support more relevant feedback instead of generic responses.</p></div>
+      </div>
+      <div class="decision">
+        <b>03</b>
+        <div><strong>Built for integration</strong><p>The module was designed around the larger application's architecture, shared services and collaborative development context.</p></div>
+      </div>
+      <div class="decision">
+        <b>04</b>
+        <div><strong>Evaluation matters</strong><p>The project included usability-oriented evaluation and User Acceptance Testing concepts to assess whether the module was understandable and usable by intended users.</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>WHAT THIS PROJECT DEMONSTRATES</div>
+      <h2>Applied AI inside a real application context.</h2>
+      <div class="case-grid">
+        <article class="case-card"><h3>AI Product Thinking</h3><p>Using AI as part of a broader product workflow rather than treating the model itself as the product.</p></article>
+        <article class="case-card"><h3>Mobile + Backend Integration</h3><p>Connecting Flutter interfaces with FastAPI services, REST APIs and relational data.</p></article>
+        <article class="case-card"><h3>Collaborative Architecture</h3><p>Designing an individual feature so it can coexist with modules developed by other team members.</p></article>
+        <article class="case-card"><h3>User-Centred Evaluation</h3><p>Considering usability, engagement and user acceptance alongside implementation.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>PORTFOLIO NOTE</div>
+      <h2>Project evidence will be shown selectively.</h2>
+      <div class="note">
+        The portfolio will include architecture material, safe interface screenshots and project documentation where appropriate.
+        It will avoid exposing sensitive mental-health test data or information that belongs to other student contributors.
+      </div>
+    </section>
+
+    <div class="case-footer">
+      <a class="button secondary" href="index.html">Back to Home</a>
+      <a class="button primary" href="index.html#contact">Contact Me</a>
+    </div>
+  </main>
+</body>
+</html>

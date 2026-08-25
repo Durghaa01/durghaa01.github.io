@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Case study: Custom Loan Management Web Application by Durghaashini S Ragunathan." />
+  <title>Loan Management Web Application | Durghaashini S Ragunathan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .case-wrap{max-width:1180px;margin:auto;padding:72px clamp(24px,6vw,90px) 110px}
+    .case-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:54px;font-size:12px;color:var(--muted)}
+    .case-nav a{text-decoration:none}
+    .case-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+    .case-hero h1{font-size:clamp(48px,6vw,78px);line-height:.98;letter-spacing:-.055em;margin:14px 0 22px}
+    .case-hero p{color:var(--muted);font-size:17px;line-height:1.75}
+    .case-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .meta-card{padding:18px;border:1px solid var(--line);border-radius:14px;background:rgba(13,20,37,.78)}
+    .meta-card small{display:block;color:var(--muted-2);font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+    .meta-card strong{display:block;margin-top:5px;font-size:13px}
+    .case-banner{margin:46px 0 68px;min-height:360px;border:1px solid #2c3855;border-radius:20px;background:
+      radial-gradient(circle at 70% 30%,rgba(139,92,246,.22),transparent 24%),
+      linear-gradient(145deg,#0f1930,#0b1020);position:relative;overflow:hidden;padding:34px}
+    .case-banner .mock-shell{height:100%;min-height:290px;border:1px solid #344463;border-radius:14px;background:#0d1425;display:grid;grid-template-columns:190px 1fr;overflow:hidden}
+    .case-banner .side{background:#111c32;border-right:1px solid #283653;padding:20px}
+    .case-banner .side i{display:block;height:9px;background:#2f3f61;border-radius:5px;margin:14px 0}
+    .case-banner .main{padding:22px}
+    .case-banner .top{height:28px;border-radius:6px;background:#e5eaf4;opacity:.9;margin-bottom:18px}
+    .case-banner .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.case-banner .cards span{height:54px;border-radius:7px;background:#f4f6fb}
+    .case-banner .chart{margin-top:14px;height:112px;border-radius:8px;background:linear-gradient(180deg,#243966,#121d38);position:relative}
+    .case-banner .chart:after{content:"";position:absolute;left:8%;right:8%;top:46%;height:3px;background:linear-gradient(90deg,#7c6cff,#a054ff,#4aa7ff);transform:skewY(-8deg)}
+    .case-section{padding:54px 0;border-top:1px solid rgba(148,163,184,.12)}
+    .case-section h2{font-size:34px;letter-spacing:-.035em;margin:0 0 18px}
+    .case-section p{color:var(--muted);max-width:860px}
+    .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+    .case-card{padding:22px;border:1px solid var(--line);border-radius:14px;background:rgba(11,17,32,.68)}
+    .case-card h3{font-size:15px;margin:0 0 10px}
+    .case-card p{font-size:12px;line-height:1.65;margin:0}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .feature{padding:18px;border:1px solid var(--line);border-radius:13px;background:#0c1324}
+    .feature strong{display:block;font-size:12px;margin-bottom:6px}
+    .feature span{font-size:11px;color:var(--muted)}
+    .decision{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid rgba(148,163,184,.1)}
+    .decision:last-child{border-bottom:0}
+    .decision b{width:40px;height:40px;border:1px solid #354362;border-radius:10px;display:grid;place-items:center;color:#ad95ff;font-size:11px}
+    .decision strong{display:block;font-size:13px;margin-bottom:5px}
+    .decision p{font-size:12px;margin:0}
+    .safe-note{padding:20px;border:1px solid #473876;border-radius:14px;background:rgba(80,55,150,.12);color:#cfc6ef;font-size:12px}
+    .stack{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.stack span{border:1px solid #2b3855;border-radius:8px;padding:7px 10px;font-size:10px;color:#c9d2e2;background:#0c1323}
+    .case-footer{display:flex;justify-content:space-between;gap:24px;align-items:center;padding-top:42px;border-top:1px solid rgba(148,163,184,.12)}
+    .case-footer a{text-decoration:none}
+    @media(max-width:850px){.case-hero,.case-grid{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}.case-banner .mock-shell{grid-template-columns:90px 1fr}}
+    @media(max-width:560px){.feature-grid{grid-template-columns:1fr}.case-banner{padding:16px}.case-banner .mock-shell{grid-template-columns:1fr}.case-banner .side{display:none}.case-meta{grid-template-columns:1fr}}
+  .case-main-nav{display:flex}
+@media(max-width:760px){
+  .case-main-nav{display:none!important}
+  .site-header{grid-template-columns:1fr auto}
+  .header-actions{display:flex}
+  .header-actions .cta-small{display:inline-flex}
+}
+</style>
+</head>
+<body>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="glow glow-one" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">DR</span>
+      <span class="brand-copy"><strong>DURGHAASHINI</strong><small>Software Developer</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#top">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="research-credentials.html">Research</a>
+      <a href="research-credentials.html#credentials">Credentials</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions"><a class="cta-small" href="index.html">Back to Portfolio</a></div>
+  </header>
+
+  <main class="case-wrap">
+    <div class="case-nav">
+      <a href="index.html#projects">← Back to Projects</a>
+      <span>CASE STUDY · REAL CLIENT PROJECT</span>
+    </div>
+
+    <section class="case-hero">
+      <div>
+        <div class="section-kicker"><span class="dot"></span>FULL-STACK DEVELOPMENT</div>
+        <h1>Custom Loan Management Web Application</h1>
+        <p>
+          A custom business system designed to centralize and digitize customer,
+          loan, payment, ledger, receipt, reporting and staff-access workflows for a real client.
+        </p>
+        <div class="stack">
+          <span>Python</span><span>Django</span><span>HTML</span><span>CSS</span>
+          <span>JavaScript</span><span>SQLite</span>
+        </div>
+      </div>
+
+      <div class="case-meta">
+        <div class="meta-card"><small>Role</small><strong>Freelance Full-Stack Developer</strong></div>
+        <div class="meta-card"><small>Timeline</small><strong>Dec 2025 – 2026</strong></div>
+        <div class="meta-card"><small>Project Type</small><strong>Real Client Software</strong></div>
+        <div class="meta-card"><small>Responsibility</small><strong>End-to-End Development</strong></div>
+      </div>
+    </section>
+
+    <div class="case-banner" aria-label="Stylized application preview">
+      <div class="mock-shell">
+        <div class="side"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="main">
+          <div class="top"></div>
+          <div class="cards"><span></span><span></span><span></span></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>THE PROBLEM</div>
+      <h2>Turning manual lending workflows into a structured web system.</h2>
+      <p>
+        The client needed a custom application that could bring together information
+        and processes that would otherwise be handled across separate manual records.
+        The challenge was not simply building forms — it was translating business rules
+        into workflows that staff could actually use.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>MY ROLE</div>
+      <h2>Independent development from requirements to delivery preparation.</h2>
+      <div class="case-grid">
+        <article class="case-card"><h3>Requirements & Workflow Analysis</h3><p>Translated client requirements and existing operational processes into structured software workflows and feature priorities.</p></article>
+        <article class="case-card"><h3>System Design</h3><p>Planned modules, data relationships, user access rules and the flow between customer, loan, payment and reporting functions.</p></article>
+        <article class="case-card"><h3>Full-Stack Implementation</h3><p>Built the application using Django/Python with HTML, CSS, JavaScript and SQLite across the application stack.</p></article>
+        <article class="case-card"><h3>Testing & Client Communication</h3><p>Managed iterative implementation, validation, client clarification and delivery preparation throughout the project lifecycle.</p></article>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>CORE FUNCTIONALITY</div>
+      <h2>One system, multiple connected workflows.</h2>
+      <div class="feature-grid">
+        <div class="feature"><strong>Customer Management</strong><span>Customer registration, profiles and supporting records.</span></div>
+        <div class="feature"><strong>Loan Management</strong><span>Loan creation, agreements, loan numbering and related records.</span></div>
+        <div class="feature"><strong>Payments</strong><span>Payment recording and integration with customer/loan history.</span></div>
+        <div class="feature"><strong>Ledgers</strong><span>Structured ledger workflows tied to loan and transaction activity.</span></div>
+        <div class="feature"><strong>Receipts</strong><span>Receipt generation and transaction documentation.</span></div>
+        <div class="feature"><strong>Reporting</strong><span>Reporting workflows designed around the client's operational requirements.</span></div>
+        <div class="feature"><strong>Documents</strong><span>Supporting document upload and document-generation workflows.</span></div>
+        <div class="feature"><strong>Staff Access</strong><span>Authentication and role/permission-oriented staff access.</span></div>
+        <div class="feature"><strong>Activity Tracking</strong><span>Operational visibility across user actions and system activity.</span></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>IMPORTANT DESIGN DECISIONS</div>
+      <h2>Engineering around the business rules.</h2>
+
+      <div class="decision">
+        <b>01</b>
+        <div><strong>Custom workflows instead of a generic template</strong><p>The system was shaped around the client's actual operating process rather than forcing the business into an off-the-shelf workflow.</p></div>
+      </div>
+      <div class="decision">
+        <b>02</b>
+        <div><strong>Role-based access and separation of responsibilities</strong><p>Access and workflows were designed around different staff responsibilities and levels of visibility.</p></div>
+      </div>
+      <div class="decision">
+        <b>03</b>
+        <div><strong>Connected records rather than duplicated information</strong><p>Customer, loan, payment, ledger and receipt information is treated as related system data rather than isolated records.</p></div>
+      </div>
+      <div class="decision">
+        <b>04</b>
+        <div><strong>Browser-based system</strong><p>The project was designed as an online web application so authorized users can access the system through standard desktop/laptop browsers, with lighter mobile use where appropriate.</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>PRIVACY & PUBLIC PORTFOLIO</div>
+      <h2>Showing the engineering without exposing the client.</h2>
+      <div class="safe-note">
+        This public case study intentionally excludes real customer records, identification data,
+        credentials, financial figures, uploaded documents and confidential business information.
+        Any future screenshots shown here will use anonymized or demonstration data only.
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="section-kicker"><span class="dot"></span>WHAT THIS PROJECT DEMONSTRATES</div>
+      <h2>More than framework knowledge.</h2>
+      <div class="case-grid">
+        <article class="case-card"><h3>Business-to-Software Translation</h3><p>Understanding operational requirements and turning them into usable application logic.</p></article>
+        <article class="case-card"><h3>Ownership</h3><p>Handling requirements, system design, implementation, testing and client communication independently.</p></article>
+        <article class="case-card"><h3>Full-Stack Thinking</h3><p>Working across backend logic, database relationships, frontend workflows and system-level behavior.</p></article>
+        <article class="case-card"><h3>Real-World Constraints</h3><p>Balancing usability, privacy, access control, business rules and delivery expectations in a client project.</p></article>
+      </div>
+    </section>
+
+    <div class="case-footer">
+      <a class="button secondary" href="index.html">Back to Home</a>
+      <a class="button primary" href="index.html#contact">Contact Me</a>
+    </div>
+  </main>
+</body>
+</html>
